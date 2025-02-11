@@ -1,3 +1,128 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+        --primary-green-color: #456137;
+        --cool-white: #F0F0F0;
+        --pure-white: #FFFFFF;
+        --off-white: #FAFAFA;
+        --snow-white: #F8F8F8;
+        --ghost-white: #F5F5F5;
+        --ivory-white: #FFFFF0;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.active {
+    border-bottom: 2px solid var(--cool-white);
+}
+
+.btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-width: 2px;
+    border-color: #399f06;
+    color: #f6e5ad;
+    background-color: #399f06;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f6e5ad;
+    border-color: #399f06;
+    color: #292929;
+}
+
+.btn-outline {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-width: 2px;
+    border-color: var(--cool-white);
+    color: var(--cool-white);
+    transition: all 0.3s ease;
+}
+.btn-outline:hover {
+    background-color: var(--cool-white);
+    color: #000; /* Change text color for better contrast */
+    border-color: var(--cool-white);
+}
+
+/* Focus Effect (for keyboard navigation) */
+.btn-outline:focus {
+    outline: none;
+    box-shadow: 0 0 8px var(--cool-white); /* Adds a glow effect */
+}
+
+
+/*yellow background*/
+.heading {
+    color: #399f06;
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-transform: capitalize;
+
+    @media (min-width: 768px) {
+        .heading {
+            font-size: 2.25rem;
+        }
+
+    }
+}
+
+.sub-heading {
+    color: #292929;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/*green background*/
+.sec-btn {
+    color: #f6e5ad;
+    border-width: 2px;
+    border-color: #f6e5ad;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.sec-btn:hover {
+    color: #010101;
+    background-color: #f6e5ad;
+}
+
+.sec-sub-heading {
+    color: #f6e5ad;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.sec-heading {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #f6e5ad;
+}
